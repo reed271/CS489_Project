@@ -1,0 +1,35 @@
+main{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sidebar{
+    background-color: beige;
+    font-size: xx-large;
+}
+  
+.priceLabel{
+    text-align: right;
+    color:gray;
+}
+
+.price{
+    text-align: right;
+}
+
+.productDetails{
+    color:gray;
+}
+
+.deleteButton{
+    margin-top: 20px;
+}
+
+.checkout{
+    text-align: right;
+}
+
+.subtotal{
+    font-size: 20px;
+}
