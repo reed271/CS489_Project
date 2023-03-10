@@ -492,3 +492,95 @@ a:hover {
 .product-pic {
     width: 150px;
 }
+
+.username {
+    text-align: left;
+    font-weight: normal;
+    padding: 3px;
+    margin: 4px 3px 0px 3px;
+    font-size: 18px;
+    width: 80%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+h1 {
+    text-align: center;
+}
+.container {
+    margin: 50px auto;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+form {
+    margin: 20px auto;
+    max-width: 600px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+input[type="text"], input[type="email"] {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+input[type="file"] {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #4286f4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Style the search input */
+  input[type="text"] {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em 0 0 0.5em;
+    background-color: #f5f5f5;
+    font-size: 1em;
+    width: 10em;
+  }
+
+  /* Style the search button */
+  button[type="submit"] {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0 0.5em 0.5em 0;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
