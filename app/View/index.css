@@ -502,30 +502,31 @@ a:hover {
     width: 80%;
 }
 
-body {
+.ep-body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
-h1 {
+.ep-h1 {
     text-align: center;
 }
-.container {
+.ep-container {
     margin: 50px auto;
     max-width: 800px;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-form {
+.ep-form {
     margin: 20px auto;
     max-width: 600px;
 }
-label {
+.ep-label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
-input[type="text"], input[type="email"] {
+
+.ep-email {
     display: block;
     margin-bottom: 20px;
     padding: 10px;
@@ -536,7 +537,7 @@ input[type="text"], input[type="email"] {
     max-width: 400px;
     box-sizing: border-box;
 }
-input[type="file"] {
+.ep-pic {
     display: block;
     margin-bottom: 20px;
     padding: 10px;
@@ -547,7 +548,7 @@ input[type="file"] {
     max-width: 400px;
     box-sizing: border-box;
 }
-input[type="submit"] {
+.ep-submit {
     display: block;
     margin: 20px auto;
     padding: 10px;
@@ -559,28 +560,77 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-form {
+.search-form {
     display: flex;
     align-items: center;
   }
 
-  /* Style the search input */
-  input[type="text"] {
-    padding: 0.5em;
-    border: none;
-    border-radius: 0.5em 0 0 0.5em;
-    background-color: #f5f5f5;
-    font-size: 1em;
-    width: 10em;
-  }
+/* Style the search input */
+.search-input {
+padding: 0.5em;
+border: none;
+border-radius: 0.5em 0 0 0.5em;
+background-color: #f5f5f5;
+font-size: 1em;
+width: 10em;
+}
 
-  /* Style the search button */
-  button[type="submit"] {
-    padding: 0.5em 1em;
+/* Style the search button */
+.search-button {
+padding: 0.5em 1em;
+border: none;
+border-radius: 0 0.5em 0.5em 0;
+background-color: #4CAF50;
+color: white;
+font-size: 1em;
+cursor: pointer;
+}
+
+.vp-body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.vp-h1 {
+    text-align: center;
+}
+.vp-container {
+    margin: 50px auto;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.vp-profile-pic {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.vp-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+}
+.vp-table td, .vp-table th {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+}
+.vp-table2 th {
+    background-color: #f0f0f0;
+    font-weight: normal;
+}
+.edit-profile-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #4286f4;
+    color: #fff;
     border: none;
-    border-radius: 0 0.5em 0.5em 0;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1em;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-  }
+}

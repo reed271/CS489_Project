@@ -20,49 +20,49 @@
                 <img class="logo" src="images/reel_logo.png" alt="">
                     <div class="table-bordered">
                         <div class="current-entry">
-                            <a href="https://school.eecs.wsu.edu/directors-message/" class="table-entry">
+                            <a href="view_profile.html" class="table-entry">
                             Current User: Caleb Valdez-Copeland
                         </a>
                         </div>
                         <hr>
                         <div class="current-entry">
-                            <a href="https://school.eecs.wsu.edu/directors-message/" class="table-entry">
+                            <a href="http://127.0.0.1:5500/app/View/storefront.html" class="table-entry">
                             Homepage
                         </a>
                         </div>
                         <hr>
                         <div class="table-entry">
-                            <a href="https://school.eecs.wsu.edu/directors-message/" class="table-entry">
+                            <a href="http://127.0.0.1:5500/app/View/storefront.html" class="table-entry">
                             Browse Items
                             </a>
                         </div>
                         <hr>
                         <div class="table-entry">
-                            <a href="https://school.eecs.wsu.edu/#" class="table-entry">
+                            <a href="view_profile.html" class="table-entry">
                                 Profile
                             </a>
                         </div>
                         <hr>
                         <div class="table-entry">
-                            <a href="https://school.eecs.wsu.edu/#" class="table-entry">
+                            <a href="" class="table-entry">
                                 Login
                                 </a>
                         </div>
                         <hr>
                         <div class="table-entry">
-                            <a href="https://school.eecs.wsu.edu/#" class="table-entry">
-                                New Items
+                            <a href="http://127.0.0.1:5500/app/View/sell_item.html" class="table-entry">
+                                Upload New Items
                                 </a>
                         </div>
                         <hr>
                         <div class="table-entry">
-                            <a href="https://school.eecs.wsu.edu/#" class="table-entry">
-                                Upcoming Movies
+                            <a href="http://127.0.0.1:5500/app/View/checkout.html" class="table-entry">
+                                Checkout
                                 </a>
                         </div>
                         <hr>
                         <div class="table-entry">
-                            <a href="https://school.eecs.wsu.edu/giving/" class="table-entry">
+                            <a href="" class="table-entry">
                                 Contact Us
                                 </a>
                         </div>
@@ -80,19 +80,20 @@
 	<title>Edit Profile</title>
 </head>
 <body>
-	<div class="container">
+	<div class="container" class="ep-container">
 		<h1>Edit Profile</h1>
-		<form>
-			<label for="username">Username:</label>
-			<input type="text" id="username" name="username" value="JohnDoe">
+		<hr>
+		<form class="ep-form">
+			<label for="username" class="ep-label">Username:</label>
+			<input type="text" id="username" name="username" value="JohnDoe" class="ep-email">
 			
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" value="johndoe@example.com">
+			<label for="email" class="ep-label">Email:</label>
+			<input type="email" id="email" name="email" value="johndoe@example.com" class="ep-email">
 			
-			<label for="profile-pic">Profile Picture:</label>
-			<input type="file" id="profile-pic" name="profile-pic">
+			<label for="profile-pic" class="ep-label">Profile Picture:</label>
+			<input type="file" id="profile-pic" name="profile-pic" class="ep-pic">
 			
-			<input type="submit" value="Save Changes">
+			<input type="submit" value="Save Changes" class="ep-submit">
 		</form>
 	</div>
 </body>
