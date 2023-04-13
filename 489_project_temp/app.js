@@ -10,6 +10,8 @@ const User = require('./models/User')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var registerRouter = require("./routes/register")
+var storefrontRouter = require("./routes/storefront")
 
 var app = express();
 
@@ -23,8 +25,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'wsu489proj',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}))
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/register', registerRouter);
+app.use('/storefront', storefrontRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -43,7 +54,7 @@ app.use(function(err, req, res, next) {
 });
 
 async function setup() {
-  const reed = await User.create({ username: "subu", password: "1234" });
+  const reed = await User.create({ username: "reed", password: "1234", email: "reed.havens@wsu.edu", birthdate: "06-17-99", address: "14511 25th Ave SE"});
   console.log("reed instance created...")
 }
 

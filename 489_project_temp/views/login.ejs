@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ben_css.css">
 </head>
 
 <body>
@@ -79,7 +79,7 @@
                 <br>
             </h1>
         </div>
-        <form>
+        <form method="post" action="/login">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <br>
@@ -90,7 +90,7 @@
         </form>
 
         <br>
-        <a href="signup" class="">
+        <a href="/register" class="">
             New User? Click here!
         </a>
         
