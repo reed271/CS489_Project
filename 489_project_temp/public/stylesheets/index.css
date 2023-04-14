@@ -634,3 +634,9 @@ cursor: pointer;
     font-size: 16px;
     cursor: pointer;
 }
+
+.design {  
+    color: pink;  
+    font-size: 20px;  
+    margin-top: 30px;  
+}  

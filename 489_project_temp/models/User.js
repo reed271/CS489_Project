@@ -1,5 +1,7 @@
 const sequelize = require('../db')
 const { Model, DataTypes } = require('sequelize')
+const Product = require('../models/Product')
+
 
 class User extends Model {
 
@@ -40,11 +42,16 @@ User.init({
   address: {
     type: DataTypes.STRING,
     allowNull: false
-  }
+  },
 
 }, {
   sequelize, 
   modelName: 'User'
 });
+
+User.hasMany(Product, {
+  foreignKey: 'username'
+});
+Product.belongsTo(User)
 
 module.exports = User
