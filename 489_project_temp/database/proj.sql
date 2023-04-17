@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS USER ( username TEXT PRIMARY KEY NOT NULL, password TEXT NOT NULL );
+
+DELETE FROM USER;
+
+INSERT INTO USER VALUES ('reed', '1234', 'reed.havens@wsu.edu' '06/17/99', '14511 25th Ave SE');
