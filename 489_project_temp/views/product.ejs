@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- My CSS -->
-    <link rel="stylesheet" href="ben_css.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ben_css.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -76,44 +76,32 @@
             <div class="col-10">
 
                 <!-- Content -->
-                <main>
+                <main class="wide">
                     <div class="row">
 
-                        <!-- Estimated Delivery column -->
-                        <div class="col container">
-                            <h4> Estimated Delivery </h4> <hr>
-                            <h3 class="shippingDate"> Saturday, March 11</h3> <hr>
-                            <h6> Destination: </h6>
-                            <p> Pullman, WA 99163 </p> <hr>
-                            <h6> Tracking number: </h6>
-                            <a href=""> 1234567890 </a>
+                        <!-- Image -->
+                        <div class="col-6">
+                            <img src="images/whip.jpg" class="product-pic" width="100%">
                         </div>
 
-                        <!-- Shipment Activity column -->
-                        <div class="col container">
-                            <h4> Shipment Activity </h4> <hr>
-                            <h6> March 9 - 12:00 AM </h6>
-                            <p> In Transit, Arriving On Time </p> <hr>
-                            <h6 class="gray"> March 8 - 4:03 PM </h6>
-                            <p class="gray"> Departed Post Office Tucson, AZ </p> <hr>
-                            <h6 class="gray"> March 8 - 2:38 PM </h6>
-                            <p class="gray"> USPS picked up item Tucson, AZ </p> <hr>
-                            <h6 class="gray"> March 7 - 11:46 AM </h6>
-                            <p class="gray"> Shipping Label Created, USPS Awaiting Item Tucson, AZ </p>
+                        <!-- Description -->
+                        <div class="col-4">
+                            <h3> Indiana Jones Whip (Crystal Skull) </h3>
+                            <p class="gray"> Posted at: February 21st, 2023 </p>
+                            <p class="gray"> Posted by: Reed Havens </p>
+                            <p> This is the authentic whip used by Harrison Ford in the filming of "Indiana Jones and the Crystal Skull" </p>
+                            <ul>
+                                <li> Cool </li>
+                                <li> Facts </li>
+                                <li> Here </li>
+                            </ul>
                         </div>
 
-                        <!-- Shipment Contents column -->
+                        <!-- Buy it -->
                         <div class="col container">
-                            <h4> Shipment Contents </h4> <hr>
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="https://via.placeholder.com/80x80" alt="Product Image">
-                                </div>
-                                <div class="col-8">
-                                    <h6> Product name </h2>
-                                    <p> Qty: 1 </p>
-                                </div>
-                            </div>
+                            <h4> Price: $275</h4>
+                            <button type="button" class="btn btn-primary deleteButton"> Buy now </button>
+                            <button type="button" class="btn btn-warning deleteButton"> Add to cart </button>
                         </div>
                     </div>
                 </main>
