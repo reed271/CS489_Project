@@ -49,9 +49,6 @@ User.init({
   modelName: 'User'
 });
 
-User.hasMany(Product, {
-  foreignKey: 'username'
-});
-Product.belongsTo(User)
-
+User.belongsToMany(Product, {through: "UserProducts", as: "products", foreignKey: "userID"});
+Product.belongsToMany(User, {through: "UserProducts", as: "users", foreignKey: "productID"});
 module.exports = User

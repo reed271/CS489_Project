@@ -44,7 +44,11 @@ router.get('/addtocart/:name', async function(req, res, next) {
   //const user = req.session.user
   const user = await findUser(req.session.user.username, req.session.user.password)
   const product = await findProduct(req.params.name)
-  product.username = user.username
+  //console.log(product)
+  console.log(user)
+  await user.addProduct(product)
+  console.log(await user.getProducts())
+  //product.username = user.username
   //product.username = "caleb"
   await user.save()
   await product.save()
@@ -59,8 +63,9 @@ router.get('/shoppingCart', async function(req, res, next) {
   //const user = req.session.user
   const user = await findUser(req.session.user.username, req.session.user.password)
   const products = await Product.findAll();
-  var myProducts = []
+  var myProducts = await user.getProducts()
   //console.log(products)
+  /*
   for (let product of products) {
     console.log("\n\nINSIDE LOOP\n\n")
     console.log(product)
@@ -73,6 +78,7 @@ router.get('/shoppingCart', async function(req, res, next) {
       myProducts.push(product)
     }
   }
+  */
   console.log(myProducts)
   res.render("shoppingCart", {user, myProducts})
   //res.redirect("/storefront")
