@@ -3,10 +3,10 @@ const { Model, DataTypes } = require('sequelize')
 
 class Product extends Model {
 
-    static async findUser(name){
+    static async findProduct(id){
         try {
-            const item = await Product.findByPk(name)
-            if(item.name == name){
+            const item = await Product.findByPk(id)
+            if(item.id == id){
                 return item
             }else{
                 return null
@@ -20,9 +20,13 @@ class Product extends Model {
 }
 
 Product.init({
+  id: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    primaryKey: true
+  },
   name: {
     type: DataTypes.STRING,
-    primaryKey: true,
     allowNull: false
   },
   desc: {

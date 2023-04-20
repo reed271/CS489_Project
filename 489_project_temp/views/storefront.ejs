@@ -66,6 +66,12 @@
                         </div>
                         <hr>
                         <div class="table-entry">
+                            <a href="/storefront/shoppingCart" class="table-entry">
+                                Shopping Cart
+                                </a>
+                        </div>
+                        <hr>
+                        <div class="table-entry">
                             <a href="" class="table-entry">
                                 Contact Us
                                 </a>
@@ -173,11 +179,9 @@
                 <td colspan="3" style = "text-align:center" valign="bottom">  
                     <br>
                     <span class="formbody">Posted by: <%= item.owner %></span>
-                    <p class = "design" >Shopping-cart icon design 2 with link : <a href="#">  
-                        <span class="glyphicon glyphicon-shopping-cart">  
-                      </span>  
-                      </a>  
-                    </p>
+                    <form action=<%= "/storefront/addtocart/"+item.id %> method="get">
+                        <input type="submit" class="btn btn-outline-primary" value="Add to Cart">
+                    </form>
               
 
                 </td>
@@ -187,6 +191,8 @@
     </div>
 
     <% } %> 
+
+</div>
 
     <!-- hard coded examples 
     
