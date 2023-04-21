@@ -185,6 +185,12 @@
                     <form action=<%= "/storefront/addtocart/"+item.id %> method="get">
                         <input type="submit" class="btn btn-outline-primary" value="Add to Cart">
                     </form>
+
+                    <% if(item.owner == user.username){ %>
+                        <form action=<%= "/storefront/addtocart/"+item.id %> method="get">
+                            <input type="submit" class="btn btn-outline-primary" value="DELETE">
+                        </form>
+                    <% } %>
               
 
                 </td>

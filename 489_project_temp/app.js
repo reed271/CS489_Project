@@ -54,7 +54,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
 async function setup() {
+  /*
   const reed = await User.create({ username: "reed", password: "1234", email: "reed.havens@wsu.edu", birthdate: "06-17-99", address: "14511 25th Ave SE"});
   const product = await Product.create({
     id: "001",
@@ -72,15 +74,17 @@ async function setup() {
     owner: "reed",
     sold: true
   })
-
+  */
   console.log("reed instance created...")
 }
 
-sequelize.sync({ force: true }).then(()=>{
+
+sequelize.sync({ force: false}).then(()=>{
   console.log("Sequelize Sync Completed...");
   setup().then(()=> console.log("User setup complete"))
 })
 
+//INSERT INTO USER VALUES ('reed', '1234', 'reed.havens@wsu.edu' '06/17/99', '14511 25th Ave SE');
 
 
 module.exports = app;
