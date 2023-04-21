@@ -36,13 +36,13 @@
                         </div>
                         <hr>
                         <div class="table-entry">
-                            <a href="http://127.0.0.1:5500/app/View/storefront.html" class="table-entry">
+                            <a href="/storefront" class="table-entry">
                             Browse Items
                             </a>
                         </div>
                         <hr>
                         <div class="table-entry">
-                            <a href="view_profile.html" class="table-entry">
+                            <a href="/users/view_profile" class="table-entry">
                                 Profile
                             </a>
                         </div>
@@ -102,6 +102,9 @@
 <div class="postlist">
 
     <% for (item of products) { %>
+        <% if(item.sold == false){ %>
+            
+        
 
     <!-- Item 1-->
     <div class="post-box">
@@ -189,7 +192,7 @@
             </tr>
         </table>
     </div>
-
+        <% } %>
     <% } %> 
 
 </div>

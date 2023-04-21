@@ -61,8 +61,18 @@ async function setup() {
     name: "Reed Test Product #1",
     desc: "This is a test product, intended only to be used in the testing environemnt. This should be removed before submission.",
     price: 99.99,
-    owner: "Admin"
+    owner: "Admin",
+    sold: false
   })
+  const product2 = await Product.create({
+    id: "002",
+    name: "Reed Test Product #2",
+    desc: "This is a SOLD test product, intended only to be used in the testing environemnt. This should be removed before submission. This should NOT be visible on storefront",
+    price: 100.00,
+    owner: "reed",
+    sold: true
+  })
+
   console.log("reed instance created...")
 }
 

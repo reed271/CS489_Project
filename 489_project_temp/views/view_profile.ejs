@@ -100,10 +100,12 @@
 			<tr>
 				<th class="vp-table2">Current Items on Sale:</th>
 				<td class="vp-table">
+                    <% for (item of myProducts) { %>
 					<ul>
-						<li>Lebowski's Bowling Ball - $150</li>
+						<li><%= item.name %> - $<%= item.price %></li>
 						
 					</ul>
+                    <% } %> 
 				</td>
 			</tr>
 		</table>

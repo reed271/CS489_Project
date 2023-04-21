@@ -28,7 +28,8 @@ router.post('/sell_item/create', async function(req, res, next) {
             name: req.body.name,
             desc: req.body.desc,
             price: req.body.price,
-            owner: user.username
+            owner: user.username,
+            sold: false
           }
     
       )
@@ -63,23 +64,7 @@ router.get('/shoppingCart', async function(req, res, next) {
   //const user = req.session.user
   const user = await findUser(req.session.user.username, req.session.user.password)
   const products = await Product.findAll();
-  var myProducts = await user.getProducts()
-  //console.log(products)
-  /*
-  for (let product of products) {
-    console.log("\n\nINSIDE LOOP\n\n")
-    console.log(product)
-    console.log(product.username)
-    console.log(user.username)
-    if (product.username == user.username) {
-      console.log("\n\nINSIDE LOOP\n\n")
-      console.log(product.username)
-      console.log(user.username)
-      myProducts.push(product)
-    }
-  }
-  */
-  console.log(myProducts)
+  var myProducts = await user.getProducts() //returns shopping cart contents
   res.render("shoppingCart", {user, myProducts})
   //res.redirect("/storefront")
   //res.render("shoppingCart", user, myProducts)

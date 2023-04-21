@@ -41,6 +41,14 @@ Product.init({
     type: DataTypes.STRING,
     allowNull: false
   },
+  sold: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false
+  },
+  shippingDate: {
+    type: DataTypes.STRING,
+    allowNull: true
+  }
 
 }, {
   sequelize, 

@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const User = require('../models/User');
+const Product = require('../models/Product')
+const { findProduct, findByPk } = require('../models/Product');
+const { findUser } = require('../models/User');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -30,10 +33,18 @@ router.post('/editprofile/postchange', async function(req, res, next) {
   }
 });
 
-router.get('/view_profile', function(req, res, next) {
+router.get('/view_profile', async function(req, res, next) {
   //console.log(req.body.username+" - "+req.body.password);
-  const user = req.session.user
-  res.render("view_profile", {user})
+  const user = await findUser(req.session.user.username, req.session.user.password)
+  const products = await Product.findAll();
+  var myShoppingCart = await user.getProducts() //returns user's shopping cart 
+  var myProducts = []
+  for (let product of products) {
+    if (product.owner == user.username) {
+      myProducts.push(product)
+    }
+  }
+  res.render("view_profile", {user, myShoppingCart, myProducts})
 });
 
 module.exports = router;

@@ -43,6 +43,10 @@ User.init({
     type: DataTypes.STRING,
     allowNull: false
   },
+  employee: {
+    type: DataTypes.BOOLEAN,
+    allowNull: true
+  }
 
 }, {
   sequelize, 
