@@ -1,20 +1,16 @@
-<!--
-    Usage:
-    <%- include("message", {msg: "your-message-here", type: "success" or "danger"}) %>
--->
 
-<% if (type=="success") {%>
+<% if (type=="success") { %>
 
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         <%= msg %>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
-<% } else if (type=="danger") {%>
+<% } else if (type=="danger") { %>
 
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
         <%= msg %>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
-<% }%>
+<% } %>

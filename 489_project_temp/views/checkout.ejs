@@ -26,67 +26,8 @@
 
       <!-- Left Navigation Column -->
       <div class="col-2" style="position:relative">
-
-        <img class="logo" src="images/reel_logo.png" alt="">
-        <div class="table-bordered">
-          <div class="current-entry">
-            <a href="/users/view_profile" class="table-entry">
-              Current User: <%= user.username %>
-            </a>
-          </div>
-          <hr>
-          <div class="current-entry">
-            <a href="/storefront" class="table-entry">
-              Homepage
-            </a>
-          </div>
-          <hr>
-          <div class="table-entry">
-            <a href="/storefront" class="table-entry">
-              Browse Items
-            </a>
-          </div>
-          <hr>
-          <div class="table-entry">
-            <a href="/users/view_profile" class="table-entry">
-              Profile
-            </a>
-          </div>
-          <hr>
-          <div class="table-entry">
-            <a href="/" class="table-entry">
-              Login
-            </a>
-          </div>
-          <hr>
-          <div class="table-entry">
-            <a href="/storefront/sell_item" class="table-entry">
-              Upload New Items
-            </a>
-          </div>
-          <hr>
-          <div class="table-entry">
-            <a href="/checkout" class="table-entry">
-              Checkout
-            </a>
-          </div>
-          <hr>
-          <div class="table-entry">
-            <a href="/storefront/shoppingCart" class="table-entry">
-              Shopping Cart
-            </a>
-          </div>
-          <hr>
-          <div class="table-entry">
-            <a href="" class="table-entry">
-              Contact Us
-            </a>
-          </div>
-          <hr>
-        </div>
+        <%- include("navbar") %>
       </div>
-      <!-- Left Navigation Column -->
-
 
       <div class="col-10">
 
