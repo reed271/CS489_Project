@@ -84,7 +84,7 @@ async function setup() {
 }
 
 
-sequelize.sync({ force: true}).then(()=>{
+sequelize.sync({ force: false}).then(()=>{
   console.log("Sequelize Sync Completed...");
   setup().then(()=> console.log("User setup complete"))
 })
