@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storefront</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Left Navigation Column --> 
+            <div class="col-2" style="position:relative">
+                
+                <img class="logo" src="images/reel_logo.png" alt="">
+                    <div class="table-bordered">
+                        <div class="current-entry">
+                            <a href="/users/view_profile" class="table-entry">
+                            Current User: <%= user.username %>
+                        </a>
+                        </div>
+                        <hr>
+                        <div class="current-entry">
+                            <a href="/storefront" class="table-entry">
+                            Homepage
+                        </a>
+                        </div>
+                        <hr>
+                        <div class="table-entry">
+                            <a href="http://127.0.0.1:5500/app/View/storefront.html" class="table-entry">
+                            Browse Items
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="table-entry">
+                            <a href="view_profile.html" class="table-entry">
+                                Profile
+                            </a>
+                        </div>
+                        <hr>
+                        <div class="table-entry">
+                            <a href="" class="table-entry">
+                                Login
+                                </a>
+                        </div>
+                        <hr>
+                        <div class="table-entry">
+                            <a href="http://127.0.0.1:5500/app/View/sell_item.html" class="table-entry">
+                                Upload New Items
+                                </a>
+                        </div>
+                        <hr>
+                        <div class="table-entry">
+                            <a href="http://127.0.0.1:5500/app/View/checkout.html" class="table-entry">
+                                Checkout
+                                </a>
+                        </div>
+                        <hr>
+                        <div class="table-entry">
+                            <a href="" class="table-entry">
+                                Contact Us
+                                </a>
+                        </div>
+                        <hr>
+                        
+                   
+                    </div>
+                
+            </div>
+            <!-- Left Navigation Column --> 
+
+           
+
+          
+<head>
+	<title>Viewing My Profile</title>
+</head>
+<body class="vp-body">
+	<div class="vp-container">
+		<h1 class="vp-h1">Viewing My Profile</h1>
+		<img class="vp-profile-pic" src="images/jeff_ball.webp" alt="Profile Picture">
+		<table class="vp-table">
+			<tr>
+				<th class="vp-table2">Username:</th>
+				<td class="vp-table"><%= user.username %></td>
+			</tr>
+			<tr>
+				<th class="vp-table2">Email:</th>
+				<td class="vp-table"><%= user.email %></td>
+			</tr>
+            <tr>
+				<th class="vp-table2">Address:</th>
+				<td class="vp-table"><%= user.address %></td>
+			</tr>
+			<tr>
+				<th class="vp-table2">Current Items on Sale:</th>
+				<td class="vp-table">
+                    <% for (item of myProducts) { %>
+					<ul>
+						<li><%= item.name %> - $<%= item.price %></li>
+						
+					</ul>
+                    <% } %> 
+				</td>
+			</tr>
+		</table>
+        <a class="edit-profile-button" href="/users/editprofile">Edit Profile</a>
+	</div>
+</body>
+</html>
+
+
+            
+
+
+</body>
