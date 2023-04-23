@@ -7,7 +7,7 @@ const { findUser } = require('../models/User');
 
 router.get('/', async function (req, res, next) {
     const user = req.session.user
-    const products = await Product.findAll();
+    var products = await user.getProducts() //returns shopping cart contents
     let total = 0;
     for (item of products) {
         total += item.price;
