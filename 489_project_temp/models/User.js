@@ -53,6 +53,6 @@ User.init({
   modelName: 'User'
 });
 
-User.belongsToMany(Product, {through: "UserProducts", as: "products", foreignKey: "userID"});
-Product.belongsToMany(User, {through: "UserProducts", as: "users", foreignKey: "productID"});
+User.belongsToMany(Product, {through: "UserProducts", as: "products", foreignKey: "userID", uniqueKey: false});
+Product.belongsToMany(User, {through: "UserProducts", as: "users", foreignKey: "productID", uniqueKey: false});
 module.exports = User
