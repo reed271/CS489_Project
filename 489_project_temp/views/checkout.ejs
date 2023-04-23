@@ -110,7 +110,7 @@
                   </span>
                 </h4>
                 <% for (item of products) { %>
-                  <p><a href="#"><%= item.name %></a> <span class="price">$<%= item.price %></span></p>
+                  <p><%= item.name %> <span class="price">$<%= item.price %></span></p>
                   <input type="submit" value="Remove" class="btn btn-danger">
                   <hr>
                 <% } %>
