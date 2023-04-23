@@ -2,7 +2,11 @@
 <div class="table-bordered">
     <div class="current-entry">
         <a href="/users/view_profile" class="table-entry">
-            Current User: <%= user.username %>
+            <% if (typeof user !== "undefined"){ %>
+                Current User: <%= user.username %>
+            <% } else { %>
+                Current User
+            <% } %>
         </a>
     </div>
     <hr>
