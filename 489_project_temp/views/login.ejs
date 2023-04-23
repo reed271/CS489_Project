@@ -12,38 +12,30 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <div class="col-10">
+                <div class="row">
+                    <h1>
+                        REEL IN YOUR DREAM COLLECTIBLES 
+                        <br>
+                    </h1>
+                </div>
+                
+                <form method="post" action="/login">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <br>
+                    <input type="submit" value="Login">
+                </form>
 
-            <!-- Left Navigation Column --> 
-            <div class="col-2" style="position:relative">
-                <%- include("navbar") %>
-            </div>
-            <!-- Left Navigation Column --> 
-    <div class="col-10">
-        <div class="row">
-            <h1>
-                REEL IN YOUR DREAM COLLECTIBLES 
                 <br>
-            </h1>
+                <a href="/register" class="">
+                    New User? Click here!
+                </a>
+            </div>
         </div>
-        <form method="post" action="/login">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <input type="submit" value="Login">
-        </form>
-
-        <br>
-        <a href="/register" class="">
-            New User? Click here!
-        </a>
-        
     </div>
 </body>
 </html>
-
-
-
-
