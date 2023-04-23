@@ -15,61 +15,7 @@
 
             <!-- Left Navigation Column --> 
             <div class="col-2" style="position:relative">
-                
-                <img class="logo" src="images/reel_logo.png" alt="">
-                    <div class="table-bordered">
-                        <div class="current-entry">
-                            <a href="view_profile.html" class="table-entry">
-                            Current User: Caleb Valdez-Copeland
-                        </a>
-                        </div>
-                        <hr>
-                        <div class="current-entry">
-                            <a href="http://127.0.0.1:5500/app/View/storefront.html" class="table-entry">
-                            Homepage
-                        </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="http://127.0.0.1:5500/app/View/storefront.html" class="table-entry">
-                            Browse Items
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="view_profile.html" class="table-entry">
-                                Profile
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="" class="table-entry">
-                                Login
-                                </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="http://127.0.0.1:5500/app/View/sell_item.html" class="table-entry">
-                                Upload New Items
-                                </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="http://127.0.0.1:5500/app/View/checkout.html" class="table-entry">
-                                Checkout
-                                </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="" class="table-entry">
-                                Contact Us
-                                </a>
-                        </div>
-                        <hr>
-                        
-                   
-                    </div>
-                
+                <%- include("navbar") %>
             </div>
             <!-- Left Navigation Column --> 
 
@@ -96,6 +42,10 @@
                         <hr>
                         <label for="description">Description:</label>
                         <textarea id="desc" name="desc" class="formbody" required></textarea>
+                        <br>
+                        <hr>
+                        <label for="description">Unique ID:</label>
+                        <textarea id="id" name="id" class="formbody" required></textarea>
                         <br>
                         <hr>
                         <input type="submit" value="Upload">

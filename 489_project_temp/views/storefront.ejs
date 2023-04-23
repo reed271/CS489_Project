@@ -20,61 +20,7 @@
 
             <!-- Left Navigation Column --> 
             <div class="col-2" style="position:relative">
-                
-                <img class="logo" src="images/reel_logo.png" alt="">
-                    <div class="table-bordered">
-                        <div class="current-entry">
-                            <a href="/users/view_profile" class="table-entry">
-                            Current User: <%= user.username %>
-                        </a>
-                        </div>
-                        <hr>
-                        <div class="current-entry">
-                            <a href="/storefront" class="table-entry">
-                            Homepage
-                        </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="http://127.0.0.1:5500/app/View/storefront.html" class="table-entry">
-                            Browse Items
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="view_profile.html" class="table-entry">
-                                Profile
-                            </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="/" class="table-entry">
-                                Login
-                                </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="/storefront/sell_item" class="table-entry">
-                                Upload New Items
-                                </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="http://127.0.0.1:5500/app/View/checkout.html" class="table-entry">
-                                Checkout
-                                </a>
-                        </div>
-                        <hr>
-                        <div class="table-entry">
-                            <a href="" class="table-entry">
-                                Contact Us
-                                </a>
-                        </div>
-                        <hr>
-                        
-                   
-                    </div>
-                
+                <%- include("navbar") %>
             </div>
             <!-- Left Navigation Column --> 
 
@@ -96,6 +42,9 @@
 <div class="postlist">
 
     <% for (item of products) { %>
+        <% if(item.sold == false){ %>
+            
+        
 
     <!-- Item 1-->
     <div class="post-box">
@@ -173,11 +122,15 @@
                 <td colspan="3" style = "text-align:center" valign="bottom">  
                     <br>
                     <span class="formbody">Posted by: <%= item.owner %></span>
-                    <p class = "design" >Shopping-cart icon design 2 with link : <a href="#">  
-                        <span class="glyphicon glyphicon-shopping-cart">  
-                      </span>  
-                      </a>  
-                    </p>
+                    <form action=<%= "/storefront/addtocart/"+item.id %> method="get">
+                        <input type="submit" class="btn btn-outline-primary" value="Add to Cart">
+                    </form>
+
+                    <% if(item.owner == user.username){ %>
+                        <form action=<%= "/storefront/addtocart/"+item.id %> method="get">
+                            <input type="submit" class="btn btn-outline-primary" value="DELETE">
+                        </form>
+                    <% } %>
               
 
                 </td>
@@ -185,8 +138,10 @@
             </tr>
         </table>
     </div>
-
+        <% } %>
     <% } %> 
+
+</div>
 
     <!-- hard coded examples 
     

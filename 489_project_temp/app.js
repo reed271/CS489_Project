@@ -11,7 +11,9 @@ const User = require('./models/User')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var registerRouter = require("./routes/register")
-var storefrontRouter = require("./routes/storefront")
+var storefrontRouter = require("./routes/storefront");
+var checkoutRouter = require("./routes/checkout");
+const Product = require('./models/Product');
 
 var app = express();
 
@@ -36,6 +38,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/register', registerRouter);
 app.use('/storefront', storefrontRouter)
+app.use('/checkout', checkoutRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -53,16 +56,37 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
 async function setup() {
+  /*
   const reed = await User.create({ username: "reed", password: "1234", email: "reed.havens@wsu.edu", birthdate: "06-17-99", address: "14511 25th Ave SE"});
+  const product = await Product.create({
+    id: "001",
+    name: "Reed Test Product #1",
+    desc: "This is a test product, intended only to be used in the testing environemnt. This should be removed before submission.",
+    price: 99.99,
+    owner: "Admin",
+    sold: false
+  })
+  const product2 = await Product.create({
+    id: "002",
+    name: "Reed Test Product #2",
+    desc: "This is a SOLD test product, intended only to be used in the testing environemnt. This should be removed before submission. This should NOT be visible on storefront",
+    price: 100.00,
+    owner: "reed",
+    sold: true
+  })
+  */
   console.log("reed instance created...")
 }
 
-sequelize.sync({ force: true }).then(()=>{
+
+sequelize.sync({ force: false}).then(()=>{
   console.log("Sequelize Sync Completed...");
   setup().then(()=> console.log("User setup complete"))
 })
 
+//INSERT INTO USER VALUES ('reed', '1234', 'reed.havens@wsu.edu' '06/17/99', '14511 25th Ave SE');
 
 
 module.exports = app;

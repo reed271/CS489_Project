@@ -1,5 +1,5 @@
 main {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -138,35 +138,28 @@ span.price {
 }
 
 
+
+
 .table-entry {
-  font: bold 14px Arial, sans-serif;
-  color: black;
-  padding: 10px;
-  margin-bottom: 5px;
-  text-decoration: none;
-}
-
-.table-entry:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-hr {
-  border: 2px solid red;
-  margin: 10px 0;
-}
-
-
-.current-entry{
   padding-top: -10px;
   padding-left: 10px;
   font: "Lucida Grande";
-  color: gold;
+  color: gray;
+
   font-size: small;
 
 
 }
 
+.current-entry{
+  padding-top: -10px;
+  padding-left: 10px;
+  font: "Lucida Grande";
+  color: red;
+  font-size: small;
 
+
+}
 
 .constant-col {
   overscroll-behavior: none;
@@ -174,4 +167,3 @@ hr {
 }
 
 /* end of CSS for navbar */
-

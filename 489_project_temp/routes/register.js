@@ -14,12 +14,13 @@ router.post('/create', async function(req, res, next) {
           {
             username: req.body.username,
             password: req.body.password,
+            email: req.body.email,
             birthdate: req.body.birthdate,
             address: req.body.address
           }
     
       )
-      res.redirect('/home')
+      res.redirect('/')
       } catch (error) {
       res.redirect('/users') 
       }

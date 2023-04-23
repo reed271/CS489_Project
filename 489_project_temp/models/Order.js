@@ -1,7 +1,7 @@
 const sequelize = require('../db')
 const { Model, DataTypes } = require('sequelize')
 
-class Product extends Model {
+class Order extends Model {
 
     static async findProduct(id){
         try {
@@ -55,4 +55,4 @@ Product.init({
   modelName: 'Product'
 });
 
-module.exports = Product
+module.exports = Order
