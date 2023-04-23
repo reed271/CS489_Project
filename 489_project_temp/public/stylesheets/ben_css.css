@@ -138,28 +138,35 @@ span.price {
 }
 
 
-
-
 .table-entry {
-  padding-top: -10px;
-  padding-left: 10px;
-  font: "Lucida Grande";
-  color: gray;
-
-  font-size: small;
-
-
+  font: bold 14px Arial, sans-serif;
+  color: black;
+  padding: 10px;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
+
+.table-entry:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+hr {
+  border: 2px solid red;
+  margin: 10px 0;
+}
+
 
 .current-entry{
   padding-top: -10px;
   padding-left: 10px;
   font: "Lucida Grande";
-  color: red;
+  color: gold;
   font-size: small;
 
 
 }
+
+
 
 .constant-col {
   overscroll-behavior: none;
@@ -167,3 +174,4 @@ span.price {
 }
 
 /* end of CSS for navbar */
+
