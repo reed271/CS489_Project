@@ -5,14 +5,6 @@ const emailValidator = async (value) => {
       throw new Error("Email address is invalid");
     }
   };
-  
-// Alphanumeric string
-const addressValidator = async (value) => {
-  const addressRegex = /^[a-zA-Z0-9\s,'-]*$/;
-    if (!addressRegex.test(value)) {
-      throw new Error("Address is invalid");
-    }
-  };
 
 // Only Letters
 const cityValidator = async (value) => {
@@ -51,6 +43,14 @@ const yearValidator = async (value) => {
     }
   };
 
+// Check whether value is in the array
+const monthValidator = async (value) => {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    if (months.indexOf(value) === -1) {
+      throw new Error("Month is invalid");
+    }
+  };
+
 // Exactly 3 digits
 const cvvValidator = async (value) => {
   const cvvRegex = /^\d{3}$/;
@@ -59,5 +59,5 @@ const cvvValidator = async (value) => {
     }
   };
 
-export default { emailValidator, addressValidator, cityValidator,
-   stateValidator, zipCodeValidator, yearValidator, cvvValidator };
+module.exports =  { emailValidator, cityValidator,
+   stateValidator, zipCodeValidator, yearValidator, monthValidator, cvvValidator };
