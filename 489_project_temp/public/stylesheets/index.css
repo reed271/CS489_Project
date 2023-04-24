@@ -2,10 +2,10 @@
 
     width: 175px;
     padding-left: 0px;
-    padding-right: 50px;
-    padding-top: 15px;
-    padding-bottom: 100px;
-    object-fit: cover
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    object-fit: cover;
 }
 
 .logo2 {
@@ -640,3 +640,22 @@ cursor: pointer;
     font-size: 20px;  
     margin-top: 30px;  
 }  
+
+.navbar{
+    height: 99vh;
+    width: 16vw;
+}
+
+ul.nav li {
+    border-bottom: 1px solid darkgray;
+    width: 14vw;
+    transition: background-color 0.2s ease-in-out;
+}
+
+ul.nav li:hover {
+    background-color: #f0f0f0;
+}
+
+ul.nav li a{
+    color: black;
+}

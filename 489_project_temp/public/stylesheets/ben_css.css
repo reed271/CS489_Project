@@ -106,67 +106,6 @@ span.price {
   padding: 10px;
 }
 
-
-/* CSS for navbar */
-
-.logo {
-
-  width: 175px;
-  padding-left: 0px;
-  padding-right: 50px;
-  padding-top: 15px;
-  padding-bottom: 100px;
-  object-fit: cover
-}
-
-.logo2 {
-
-  width: 200px;
-  padding-left: 30px;
-  padding-top: 15px;
-  padding-bottom: 100px;
-  object-fit: cover;
-}
-
-.logo3 {
-
-  width: 1200px;
-  padding-left: 30px;
-  padding-top: 15px;
-  padding-bottom: 100px;
-  object-fit: cover;
-}
-
-
-
-
-.table-entry {
-  padding-top: -10px;
-  padding-left: 10px;
-  font: "Lucida Grande";
-  color: gray;
-
-  font-size: small;
-
-
-}
-
-.current-entry{
-  padding-top: -10px;
-  padding-left: 10px;
-  font: "Lucida Grande";
-  color: red;
-  font-size: small;
-
-
-}
-
-.constant-col {
-  overscroll-behavior: none;
-  
-}
-
-/* end of CSS for navbar */
 /* caleb css code*/
 
 /* login.ejs */

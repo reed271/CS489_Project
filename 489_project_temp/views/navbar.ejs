@@ -1,4 +1,58 @@
-<img class="logo" src="images/reel_logo.png" alt="logo">
+<aside class="flex-grow-sm-1 flex-shrink-1 sticky-top">
+    <div class="bg-light border p-3 sticky-top navbar">
+        <img class="logo" src="http://localhost:3000/images/reel_logo.png" alt="logo">
+        <ul class="nav nav-pills flex-sm-column flex-row mb-auto justify-content-between text-truncate">
+            <li>
+                
+            </li>
+            <li>
+                <a href="/users/view_profile" class="nav-link px-2 text-truncate"><span class="d-none d-sm-inline"></span>
+                    <% if (typeof user !== "undefined"){ %>
+                        Current User: <%= user.username %>
+                    <% } else { %>
+                        Current User
+                    <% } %>
+                </span></a>
+            </li>
+            <li>
+                <a href="/" class="nav-link px-2 text-truncate"><span class="d-none d-sm-inline"></span>
+                    Logout
+                </span></a>
+            </li>
+            <li>
+                <a href="/storefront" class="nav-link px-2 text-truncate"><span class="d-none d-sm-inline"></span>
+                    Homepage
+                </span></a>
+            </li>
+            <li>
+                <a href="/users/view_profile" class="nav-link px-2 text-truncate"><span class="d-none d-sm-inline"></span>
+                    Profile
+                </span></a>
+            </li>
+            <li>
+                <a href="/storefront/sell_item" class="nav-link px-2 text-truncate"><span class="d-none d-sm-inline"></span>
+                    Upload New Items
+                </span></a>
+            </li>
+            <li>
+                <a href="/checkout" class="nav-link px-2 text-truncate"><span class="d-none d-sm-inline"></span>
+                    Checkout
+                </span></a>
+            </li>
+            <li>
+                <a href="/status" class="nav-link px-2 text-truncate"><span class="d-none d-sm-inline"></span>
+                    Shipping Status
+                </span></a>
+            </li>
+            <li>
+                <a href="/contact" class="nav-link px-2 text-truncate"><span class="d-none d-sm-inline"></span>
+                    Contact Us
+                </span></a>
+            </li>
+        </ul>
+    </div>
+</aside>
+<!-- <img class="logo" src="images/reel_logo.png" alt="logo">
 <div class="table-bordered">
     <div class="current-entry">
         <a href="/users/view_profile" class="table-entry">
@@ -41,9 +95,15 @@
     </div>
     <hr>
     <div class="table-entry">
+        <a href="/status" class="table-entry">
+            Shipping Status
+        </a>
+    </div>
+    <hr>
+    <div class="table-entry">
         <a href="/contact" class="table-entry">
             Contact Us
         </a>
     </div>
     <hr>
-</div>
+</div> -->
