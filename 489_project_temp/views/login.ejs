@@ -11,36 +11,35 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-
-            <!-- Left Navigation Column --> 
-            <div class="col-2" style="position:relative">
-                <%- include("navbar") %>
+    <!-- Background image -->
+    <div class="bg-image" style="
+  background-image: url('images/studio.jpg');
+  height: 100%;
+">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <h1 class="custom-header custom-header-black">- REEL RELICS -</h1>
             </div>
-            <!-- Left Navigation Column --> 
-    <div class="col-10">
-        <div class="row">
-            <h1>
-                Welcome to the login page!
+            <div class="centered-form">
+                <form method="post" action="/login">
+                    <label for="username" class="white-text">Username:</label>
+                    <input type="text" id="username" name="username" required class="transparent-input">
+                    <br>
+                    <label for="password" class="white-text">Password:</label>
+                    <input type="password" id="password" name="password" required class="transparent-input">
+
+                    <br>
+                    <input class="login-button" type="submit" value="Login">
+                </form>
+
                 <br>
-            </h1>
+                <a href="/register" class="white-text">
+                    New User? Click here!
+                </a>
+            </div>
+
         </div>
-        <form method="post" action="/login">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <input type="submit" value="Login">
-        </form>
-        <%- include("message", {type: "danger"}) %>
-        <br>
-        <a href="/register" class="">
-            New User? Click here!
-        </a>
-        
+        <!-- Background image -->
     </div>
 </body>
 </html>
