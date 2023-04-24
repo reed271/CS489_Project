@@ -178,6 +178,13 @@ span.price {
   font-size: 72px;
 }
 
+.custom-header-sm {
+  font-family: Impact, fantasy;
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+}
+
 .header-white {
   background-color: white;
   width: 100%;
