@@ -247,6 +247,7 @@ span.price {
   border: 1px solid white;
   border-radius: 3px;
   background-color: transparent;
+  color: white
 }
 
 .login-button {

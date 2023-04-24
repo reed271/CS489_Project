@@ -60,6 +60,15 @@ router.get('/addtocart/:name', async function(req, res, next) {
   res.redirect("/storefront?msg=Item+added+to+cart")
 });
 
+router.get('/removeProduct/:name', async function (req, res, next) {
+  const user = await findUser(req.session.user.username, req.session.user.password)
+  const product = await findProduct(req.params.name)
+  await user.removeProduct(product)
+  await user.save()
+  await product.destroy()
+  res.redirect('/storefront')
+});
+
 router.get('/shoppingCart', async function(req, res, next) {
   //console.log(req.body.username+" - "+req.body.password);
   //const user = req.session.user
