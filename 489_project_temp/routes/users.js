@@ -27,7 +27,7 @@ router.post('/editprofile/postchange', async function(req, res, next) {
     } )
     await user.save()
     req.session.user = user
-    res.render('view_profile', {user})
+    res.redirect('/users/view_profile?msg=Profile+updated+successfully')
   }else{
     res.redirect("/?msg=fail")
   }
@@ -43,6 +43,9 @@ router.get('/view_profile', async function(req, res, next) {
     if (product.owner == user.username) {
       myProducts.push(product)
     }
+  }
+  if (req.query.msg) {
+    res.locals.msg = req.query.msg;
   }
   res.render("view_profile", {user, myShoppingCart, myProducts})
 });

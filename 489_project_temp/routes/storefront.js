@@ -9,6 +9,9 @@ router.get('/', async function(req, res, next) {
     //console.log(req.body.username+" - "+req.body.password);
     const user = req.session.user
     const products = await Product.findAll();
+    if (req.query.msg) {
+      res.locals.msg = req.query.msg;
+    }
     res.render("storefront", {user, products})
 });
 
@@ -46,9 +49,7 @@ router.get('/addtocart/:name', async function(req, res, next) {
   const user = await findUser(req.session.user.username, req.session.user.password)
   const product = await findProduct(req.params.name)
   //console.log(product)
-  console.log(user)
   await user.addProduct(product)
-  console.log(await user.getProducts())
   //product.username = user.username
   //product.username = "caleb"
   await user.save()
@@ -56,7 +57,7 @@ router.get('/addtocart/:name', async function(req, res, next) {
   //console.log("Product username = ", product.username)
   //user.addProduct(product)
   //console.log(await user.countProducts())
-  res.redirect("/storefront")
+  res.redirect("/storefront?msg=Item+added+to+cart")
 });
 
 router.get('/shoppingCart', async function(req, res, next) {
@@ -70,11 +71,9 @@ router.get('/shoppingCart', async function(req, res, next) {
   //res.render("shoppingCart", user, myProducts)
 });
 
-
-
-
-
-
+router.get('/search', async function(req, res, next) {
+  res.redirect("/storefront")
+});
 
 
 module.exports = router;
