@@ -98,7 +98,7 @@
                   <input type="submit" value="Continue to checkout" class="btn btn-warning">
                 </form>
               </div>
-              <%- include("message", {msg: "abc", type: "success"}) %>
+              <%- include("message", {type: "danger"}) %>
             </div>
 
             <div class="col-3">
@@ -111,7 +111,9 @@
                 </h4>
                 <% for (item of products) { %>
                   <p><%= item.name %> <span class="price">$<%= item.price %></span></p>
-                  <input type="submit" value="Remove" class="btn btn-danger">
+                  <form action=<%= "/checkout/removeProduct/"+item.id %> method="get">
+                    <input type="submit" value="Remove" class="btn btn-danger">
+                  </form>
                   <hr>
                 <% } %>
                 <p>Total <span class="price" style="color:black"><b>$<%= total %></b></span></p>

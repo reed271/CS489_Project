@@ -7,7 +7,7 @@ router.get('/', async function (req, res, next) {
 });
 
 router.post('/submit', async function (req, res, next) {
-    res.redirect('/storefront')
+    res.redirect('/storefront?msg=Your+feedback+was+submitted+successfully')
 });
 
 module.exports = router;
