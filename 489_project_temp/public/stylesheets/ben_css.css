@@ -167,3 +167,90 @@ span.price {
 }
 
 /* end of CSS for navbar */
+
+/* caleb css code*/
+
+/* login.ejs */
+.custom-header {
+  font-family: Impact, fantasy;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  font-size: 72px;
+}
+
+.header-white {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.custom-header-black {
+  color: white;
+}
+
+.header-black {
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.section-container {
+  background-image: url("images/studio.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* form stuff */
+.centered-form-old {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.centered-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.white-label {
+  color: white;
+}
+
+.white-background {
+  background-color: white;
+}
+
+.login-button {
+  margin-top: 10px;
+}
+
+.white-text {
+  color: white;
+}
+
+
+
+.transparent-input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.login-button {
+  background-color: #fff;
+  color: #000;
+}
