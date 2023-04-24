@@ -20,22 +20,6 @@ router.get('/', async function (req, res, next) {
 });
 
 router.post('/createOrder', async function (req, res, next) {
-    /*
-    {
-    firstname: 'sdfas',
-    email: 'asdasd',
-    address: 'sadasd',
-    city: 'asd',
-    state: 'asdasd',
-    zip: 'asda',
-    cardname: 'adadasd',
-    cardnumber: 'asdasd',
-    expmonth: 'asdas',
-    expyear: 'asdasd',
-    cvv: 'asd',
-    sameadr: 'on'
-    }
-    */
     try {
         await emailValidator(req.body.email)
         await cityValidator(req.body.city)
@@ -44,7 +28,7 @@ router.post('/createOrder', async function (req, res, next) {
         await yearValidator(req.body.expyear)
         await monthValidator(req.body.expmonth)
         await cvvValidator(req.body.cvv)
-        res.redirect('/storefront')
+        res.redirect('/storefront?msg=Successful+checkout')
     }
     catch (error) {
         res.redirect("/checkout?msg=" + new URLSearchParams(error.toString()).toString());

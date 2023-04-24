@@ -6,42 +6,34 @@ const { findProduct, findByPk } = require('../models/Product');
 const { findUser } = require('../models/User');
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
+router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/test', function (req, res, next) {
+router.get('/test', function(req, res, next) {
   res.send('respond with a USER TEST');
 });
 
-router.get('/editprofile', function (req, res, next) {
+router.get('/editprofile', function(req, res, next) {
   res.render('edit_profile');
 });
 
-router.post('/editprofile/postchange', async function (req, res, next) {
+router.post('/editprofile/postchange', async function(req, res, next) {
   const user = await User.findUser(req.session.user.username, req.session.user.password)
-  if (user !== null) {
+  if(user!== null){
     user.update({
       address: req.body.address,
       email: req.body.email
-    })
+    } )
     await user.save()
     req.session.user = user
-    const products = await Product.findAll();
-    var myShoppingCart = await user.getProducts() //returns user's shopping cart 
-    var myProducts = []
-    for (let product of products) {
-      if (product.owner == user.username) {
-        myProducts.push(product)
-      }
-    }
-    res.render("view_profile", { user, myShoppingCart, myProducts })
-  } else {
+    res.redirect('/users/view_profile?msg=Profile+updated+successfully')
+  }else{
     res.redirect("/?msg=fail")
   }
 });
 
-router.get('/view_profile', async function (req, res, next) {
+router.get('/view_profile', async function(req, res, next) {
   //console.log(req.body.username+" - "+req.body.password);
   const user = await findUser(req.session.user.username, req.session.user.password)
   const products = await Product.findAll();
@@ -52,7 +44,10 @@ router.get('/view_profile', async function (req, res, next) {
       myProducts.push(product)
     }
   }
-  res.render("view_profile", { user, myShoppingCart, myProducts })
+  if (req.query.msg) {
+    res.locals.msg = req.query.msg;
+  }
+  res.render("view_profile", {user, myShoppingCart, myProducts})
 });
 
 module.exports = router;

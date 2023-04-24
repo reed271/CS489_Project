@@ -12,11 +12,17 @@ const sessionChecker = (req, res, next)=>{
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  if (req.query.msg) {
+    res.locals.msg = req.query.msg;
+  }
   res.render('login', { title: 'Express' });
 });
 
 router.get('/home', function(req, res, next) {
   const user = req.session.user
+  if (req.query.msg) {
+    res.locals.msg = req.query.msg;
+  }
   res.render('index', { user });
 });
 
@@ -27,11 +33,14 @@ router.post('/login', async function(req, res, next) {
     req.session.user = user
     res.redirect('/storefront')
   }else{
-    res.redirect("/")
+    res.redirect("/?msg=" + new URLSearchParams("Invalid username or password").toString());
   }
 });
 
 router.get('/editprofile', function(req, res, next) {
+  if (req.query.msg) {
+    res.locals.msg = req.query.msg;
+  }
   res.render('edit_profile');
 });
 
@@ -43,6 +52,9 @@ router.post('/editprofile/postchange', async function(req, res, next) {
       email: req.body.email
     } )
     await user.save()
+    if (req.query.msg) {
+      res.locals.msg = req.query.msg;
+    }
     res.render("index", {user});
   }else{
     res.redirect("/?msg=fail")
