@@ -31,10 +31,7 @@
             <div class="col-10">
                 <h1>
                     Welcome to the Storefront!
-                    <form action="/search" method="get" class="search-form">
-                        <input type="text" name="q" placeholder="Search..." class="search-input">
-                        <button type="submit" class="search-button">Search</button>
-                    </form>
+                    
                     <hr>
                 </h1>
                 <br>
@@ -136,7 +133,7 @@
                                             </form>
 
                                             <% if(item.owner==user.username){ %>
-                                                <form action=<%="/storefront/addtocart/" +item.id %> method="get">
+                                                <form action=<%="/storefront/removeProduct/" +item.id %> method="get">
                                                     <input type="submit" class="btn btn-outline-primary" value="DELETE">
                                                 </form>
                                                 <% } %>
