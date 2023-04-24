@@ -8,152 +8,101 @@
     <title>Storefront</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ben_css.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 </head>
 
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-
-            <!-- Left Navigation Column -->
-            <div class="col-2" style="position:relative">
-                <%- include("navbar") %>
+    <!-- Background image -->
+    <div class="bg-image" style="
+  background-image: url('images/lights.webp');
+  height: 100%;
+">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <!-- headers -->
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <h1 class="custom-header custom-header-black">- REEL RELICS -</h1>
             </div>
-            <!-- Left Navigation Column -->
+            <br>
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <h1 class="custom-header-sm custom-header-black">reel in your <em>dream</em> collectibles</h1>
+            </div>
+            <!-- headers end-->
 
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Left Navigation Column -->
+                    <div class="col-2" style="position:relative">
+                        <%- include("navbar") %>
+                    </div>
+                    <!-- Left Navigation Column -->
+                    <div class="col-10">
+                        
+                        <br>
+                        <h2>
+                            New Listings
+                        </h2>
+                        <div class="postlist">
+                            <% for (item of products) { %>
+                                <% if(item.sold==false){ %>
 
-            <div class="col-10">
-                <h1>
-                    Welcome to the Storefront!
-                    
-                    <hr>
-                </h1>
-                <br>
-                <h2>
-                    Viewing Recently Posted Items
-
-                </h2>
-                <div class="postlist">
-
-                    <% for (item of products) { %>
-                        <% if(item.sold==false){ %>
-
-
-
-                            <!-- Item 1-->
-                            <div class="post-box">
-                                <table class="posttable" style="width:100%" valign="top">
-                                    <tr>
-                                        <!-- Title of the product -->
-                                        <td colspan="3">
-                                            <div class="posttitle">
-                                                <%= item.name %>
+                                    <div class="card my-3">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="images/whip.jpg" class="img-fluid rounded-start"
+                                                    alt="product-image">
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <!--
-                <td width="10%" >
-                    Image of the product 
-                    <img src="images/whip.jpg" class="product-pic">
-                </td> 
-                -->
-
-
-                                        <td width="80%">
-                                            <div>
-                                                <!-- Description of the product -->
-                                                <div class="postmessage">
-                                                    <%= item.desc %>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        <%= item.name %>
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        <%= item.desc %>
+                                                    </p>
+                                                    <p class="card-text"><small class="text-muted">Posted at: February
+                                                            21st, 2023</small></p>
+                                                    <p class="card-text">Price: $<%= item.price %>
+                                                    </p>
+                                                    <p class="card-text"><small class="text-muted">Posted by: <%=
+                                                                item.owner %></small></p>
+                                                    <!-- modified form -->
+                                                    <form action=<%="/storefront/addtocart/" +item.id %> method="get">
+                                                        <input type="submit" class="btn btn-add-to-cart" value="Add to Cart">
+                                                    </form>
+                                                    <% if(item.owner==user.username){ %>
+                                                        <form action=<%="/storefront/removeProduct/" +item.id %>
+                                                            method="get">
+                                                            <input type="submit" class="btn btn-outline-danger"
+                                                                value="DELETE">
+                                                        </form>
+                                                        <% } %>
                                                 </div>
-
                                             </div>
-                                            <div class="posttimestamp">
-                                                <!-- (milestone3) TODO: format the timestamp; display as local date/time-->
-                                                <!-- Time the product was posted -->
-                                                Posted at: February 21st, 2023
-                                            </div>
-                                        </td>
+                                        </div>
+                                    </div>
 
-                                        <td width="15%">
-                                            <div class="likecount">
+                                    <% } %>
+                                        <% } %>
 
-                                                <br>
+                        </div>
+                        <%- include("message", {type: "success" }) %>
 
 
-
-                                                <img src="images/whip.jpg" class="product-pic">
-
-
-
-
-
-                                                Price: $<%= item.price %>
-
-                                            </div>
-                                            <br>
-                                            <!-- Here, check is current_user made post, and if so, allow them to delete from storefront.
-                    {% if current_user == post.writer %}
-                        <form action="{{ url_for('routes.delete', post_id = post.id) }}" method="post">
-                            <input type="submit" value="Delete" class="button">
-                        </form>
-                    {% endif %}
-                    -->
-
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td colspan="3" style="text-align:center" valign="bottom">
-                                            <br>
-
-                                            <!-- Possible tag / genre information? 
-                    {% for tag in post.get_tags().all() %}
-                        <span class="tagitem">{{ tag }}</span>
-                    {% endfor %}
-                    -->
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td colspan="3" style="text-align:center" valign="bottom">
-                                            <br>
-                                            <span class="formbody">Posted by: <%= item.owner %></span>
-                                            <form action=<%="/storefront/addtocart/" +item.id %> method="get">
-                                                <input type="submit" class="btn btn-outline-primary"
-                                                    value="Add to Cart">
-                                            </form>
-
-                                            <% if(item.owner==user.username){ %>
-                                                <form action=<%="/storefront/removeProduct/" +item.id %> method="get">
-                                                    <input type="submit" class="btn btn-outline-primary" value="DELETE">
-                                                </form>
-                                                <% } %>
-
-
-                                        </td>
-                                    </tr>
-                                    </tr>
-                                </table>
-                            </div>
-                            <% } %>
-                        <% } %>
-
+                    </div>
                 </div>
-                <%- include("message", {type: "success"}) %>
-
-
             </div>
-        </div>
-    </div>
 
+        </div>
+        <!-- Background image -->
+    </div>
 
 </body>

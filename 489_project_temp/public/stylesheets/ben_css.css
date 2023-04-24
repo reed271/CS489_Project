@@ -261,3 +261,21 @@ span.price {
   background-color: #fff;
   color: #000;
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-image {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  color: white;
+  font-weight: bold;
+}
