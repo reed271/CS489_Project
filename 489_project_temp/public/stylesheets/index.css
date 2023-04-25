@@ -32,23 +32,25 @@
 .table-entry {
     padding-top: -10px;
     padding-left: 10px;
-    font: "Lucida Grande";
-    color: gray;
-
-    font-size: small;
-
-
-}
-
-.current-entry {
+    font: "Tahoma";
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+  }
+  
+  .current-entry {
     padding-top: -10px;
     padding-left: 10px;
-    font: "Lucida Grande";
-    color: red;
-    font-size: small;
-
-
-}
+    font: "Tahoma";
+    color: white;
+    font-size: medium;
+  }
+  
+  .table-entry:hover,
+  .current-entry:hover {
+    font-weight: bold;
+  }
+  
 
 .constant-col {
     overscroll-behavior: none;
@@ -320,7 +322,8 @@ body {
 }
 
 a:hover {
-    color: #2387D9;
+    color: white;
+    font-weight: bold
 }
 
 .button {
