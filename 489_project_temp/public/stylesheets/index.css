@@ -602,8 +602,10 @@ a:hover {
 }
 
 .vp-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font: Tahoma;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 2px 2px 2px 2px;
 }
 
 .vp-h1 {
@@ -613,9 +615,12 @@ a:hover {
 .vp-container {
     margin: 50px auto;
     max-width: 800px;
-    background-color: #fff;
+    background-color: transparent;
+    color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+
 }
 
 .vp-profile-pic {
@@ -623,7 +628,7 @@ a:hover {
     margin: 0 auto 20px;
     max-width: 200px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px white;
 }
 
 .vp-table {
@@ -636,13 +641,13 @@ a:hover {
 .vp-table td,
 .vp-table th {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid white;
     text-align: left;
     font-size: 14px;
 }
 
 .vp-table2 th {
-    background-color: #f0f0f0;
+    background-color: white;
     font-weight: normal;
 }
 
@@ -650,12 +655,17 @@ a:hover {
     display: block;
     margin: 20px auto;
     padding: 10px;
-    background-color: #4286f4;
-    color: #fff;
+    background-color: transparent;
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.edit-profile-button:hover {
+    background-color: black;
+    color: white;
 }
 
 .design {
