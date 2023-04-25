@@ -2,10 +2,10 @@
 
     width: 175px;
     padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    object-fit: cover;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 100px;
+    object-fit: cover
 }
 
 .logo2 {
@@ -32,43 +32,45 @@
 .table-entry {
     padding-top: -10px;
     padding-left: 10px;
-    font: "Lucida Grande";
-    color: gray;
-
-    font-size: small;
-
-
-}
-
-.current-entry{
+    font: "Tahoma";
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+  }
+  
+  .current-entry {
     padding-top: -10px;
     padding-left: 10px;
-    font: "Lucida Grande";
-    color: red;
-    font-size: small;
-
-
-}
+    font: "Tahoma";
+    color: white;
+    font-size: medium;
+  }
+  
+  .table-entry:hover,
+  .current-entry:hover {
+    font-weight: bold;
+  }
+  
 
 .constant-col {
     overscroll-behavior: none;
-    
+
 }
 
 .header-background {
-    background-color:#2f5055;
+    background-color: #2f5055;
     height: 100px;
 }
 
 .header-background3 {
-    background-color:#2f5055;
+    background-color: #2f5055;
     height: 200px;
     z-index: 1;
 }
 
 .header-cover-text {
     object-fit: cover;
-    color:gray;
+    color: gray;
     font-size: medium;
     z-index: 2;
 }
@@ -78,19 +80,21 @@
     height: 50px;
 }
 
-.header-font1{
+.header-font1 {
     font-size: medium;
     font: "Open Sans";
     color: lightblue;
     padding-left: 50px;
     padding-top: 15px;
 }
-.header-font2{
+
+.header-font2 {
     font-size: xx-large;
     color: white;
     padding-left: 50px;
 }
-.header-font3{
+
+.header-font3 {
     font-size: xx-large;
     font-family: sans-serif;
     font-weight: 700;
@@ -99,17 +103,17 @@
 }
 
 .car-caption-box {
-  position: absolute;
-  width: 300px;
-  background-color: #153237; 
-  right: 1%;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-  opacity: 70%;
-   
+    position: absolute;
+    width: 300px;
+    background-color: #153237;
+    right: 1%;
+    bottom: 20px;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    opacity: 70%;
+
 }
 
 .car-caption-header {
@@ -130,20 +134,21 @@
 
 }
 
-.carousel-control-prev, .carousel-control-next {
-  
+.carousel-control-prev,
+.carousel-control-next {
+
     z-index: 1;
 }
 
 .sub-header-background {
-    background-color:#2f5055;
+    background-color: #2f5055;
     height: 50px;
     width: 250px;
 
 }
 
 .sub-header-background-2 {
-    background-color:#2f5055;
+    background-color: #2f5055;
     height: 50px;
     width: 125px;
 
@@ -174,8 +179,7 @@ hr {
     border-top: 1px solid gray;
 }
 
-.mid-background
-{
+.mid-background {
     background-color: rgb(211, 225, 236);
 }
 
@@ -183,7 +187,7 @@ hr {
     width: 120px;
     padding-left: 10px;
     padding-top: 10px;
-   
+
 }
 
 .headline-box {
@@ -193,7 +197,7 @@ hr {
     width: 1000px;
     height: 100px;
     background-color: #153237;
-    
+
 }
 
 .headline-header {
@@ -204,18 +208,19 @@ hr {
 
 .headline-date {
     color: rgb(188, 185, 185);
-    font-weight:lighter;
+    font-weight: lighter;
     font-family: "Arial";
     font-size: smaller;
     font-style: italic;
 }
 
 .news-text {
-    color:#153237;
+    color: #153237;
     padding-left: 85px;
 }
+
 .news-text2 {
-    color:#153237;
+    color: #153237;
     padding-left: 85px;
 }
 
@@ -240,16 +245,16 @@ hr {
     padding-right: 0px;
     width: 1000px;
     height: 100px;
-  
+
 }
 
 .event-header {
-    color:#153237;
-    font-size: medium; 
+    color: #153237;
+    font-size: medium;
 }
 
 .event-small {
-    color:gray;
+    color: gray;
     font-size: medium;
 }
 
@@ -257,14 +262,14 @@ hr {
     width: 85px;
     height: 85px;
     align-content: center;
-   
-    
+
+
 
 }
 
 .fact-header {
     font-size: x-large;
-    color:rgb(166, 15, 45);
+    color: rgb(166, 15, 45);
     font-weight: 700;
     text-align: left;
 }
@@ -299,41 +304,45 @@ hr {
     padding-bottom: 30px;
 }
 
+/* NEW MODIFICATIONS */
 body {
-    margin: 1px 1px 1px 15px;
-    padding: 1px;
+    /* margin: 1px 1px 1px 15px; */
+    /* padding: 1px; */
     font-family: Tahoma;
-    text-align: left;
-  
+    /* text-align: left; */
 }
+
 .nav-container {
-    background:#f6f6f6;
+    background: #f6f6f6;
     font-family: Tahoma;
     font-size: 12px;
     height: 32px;
     text-transform: uppercase;
     padding: 0px 0px 0px 0px
 }
+
 a:hover {
-	color:#2387D9;
+    color: white;
+    font-weight: bold
 }
 
 .button {
-    width : 65px;
-    padding : 3px;    
+    width: 65px;
+    padding: 3px;
     font-size: 16px;
-    margin : 5px;
-    padding : 5px;
+    margin: 5px;
+    padding: 5px;
     border: 1px solid lightgray;
 }
+
 .button:hover {
     background-color: 157dd3;
     color: white;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.posttable { 
-    width : 100%;
+.posttable {
+    width: 100%;
     margin: 0px;
 }
 
@@ -361,13 +370,13 @@ a:hover {
     font-family: Tahoma;
 }
 
-.postlist{
+.postlist {
     display: flex;
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 799px){
-    .post-box{
+@media screen and (max-width: 799px) {
+    .post-box {
         display: flex;
         vertical-align: middle;
         width: 99%;
@@ -377,19 +386,19 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 800px) and (max-width: 1200px){
-    .post-box{
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    .post-box {
         display: flex;
         vertical-align: middle;
         width: 48%;
-        margin: 4px 4px 4px 4px;        
+        margin: 4px 4px 4px 4px;
         background-color: rgb(222, 236, 245);
         padding: 4px;
     }
 }
 
-@media screen and (min-width: 1201px){
-    .post-box{
+@media screen and (min-width: 1201px) {
+    .post-box {
         display: flex;
         vertical-align: middle;
         width: 32%;
@@ -406,7 +415,7 @@ a:hover {
     font-weight: bold;
 }
 
-.formtitle{
+.formtitle {
     text-align: left;
     font-weight: normal;
     padding: 3px;
@@ -415,7 +424,7 @@ a:hover {
     width: 80%;
 }
 
-.formbody{
+.formbody {
     text-align: left;
     font-weight: normal;
     padding: 3px;
@@ -423,9 +432,9 @@ a:hover {
     font-size: 14px;
     width: 80%;
     height: 30%;
-}   
+}
 
-.formselect{
+.formselect {
     text-align: left;
     font-weight: normal;
     padding: 3px;
@@ -435,7 +444,7 @@ a:hover {
     height: 5%;
 }
 
-.forminput{
+.forminput {
     text-align: left;
     font-weight: normal;
     padding: 3px;
@@ -445,7 +454,7 @@ a:hover {
     height: 5%;
 }
 
-.tagitem{
+.tagitem {
     text-align: left;
     font-weight: normal;
     padding: 3px;
@@ -455,11 +464,11 @@ a:hover {
 
 }
 
-.useritem{
+.useritem {
     text-align: center;
     padding: 3px;
     margin: 4px 3px 4px 3px;
-    color: crimson; 
+    color: crimson;
     text-transform: uppercase;
 }
 
@@ -475,18 +484,19 @@ a:hover {
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
-} 
+}
+
 .likebtn:hover {
     background-image: url("..//img//like_hover.png");
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .flash-container {
-	background : #99c5ee;
-	font-family: Tahoma;
-	font-size : 16px;
-	padding : 25px;
-	margin : 10px 0px 10px 0px
+    background: #99c5ee;
+    font-family: Tahoma;
+    font-size: 16px;
+    padding: 25px;
+    margin: 10px 0px 10px 0px
 }
 
 .product-pic {
@@ -506,20 +516,24 @@ a:hover {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
+
 .ep-h1 {
     text-align: center;
 }
+
 .ep-container {
     margin: 50px auto;
     max-width: 800px;
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .ep-form {
     margin: 20px auto;
     max-width: 600px;
 }
+
 .ep-label {
     display: block;
     margin-bottom: 10px;
@@ -537,6 +551,7 @@ a:hover {
     max-width: 400px;
     box-sizing: border-box;
 }
+
 .ep-pic {
     display: block;
     margin-bottom: 20px;
@@ -548,6 +563,7 @@ a:hover {
     max-width: 400px;
     box-sizing: border-box;
 }
+
 .ep-submit {
     display: block;
     margin: 20px auto;
@@ -563,66 +579,74 @@ a:hover {
 .search-form {
     display: flex;
     align-items: center;
-  }
+}
 
 /* Style the search input */
 .search-input {
-padding: 0.5em;
-border: none;
-border-radius: 0.5em 0 0 0.5em;
-background-color: #f5f5f5;
-font-size: 1em;
-width: 10em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em 0 0 0.5em;
+    background-color: #f5f5f5;
+    font-size: 1em;
+    width: 10em;
 }
 
 /* Style the search button */
 .search-button {
-padding: 0.5em 1em;
-border: none;
-border-radius: 0 0.5em 0.5em 0;
-background-color: #4CAF50;
-color: white;
-font-size: 1em;
-cursor: pointer;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0 0.5em 0.5em 0;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .vp-body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
+
 .vp-h1 {
     text-align: center;
 }
+
 .vp-container {
     margin: 50px auto;
     max-width: 800px;
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .vp-profile-pic {
     display: block;
     margin: 0 auto 20px;
     max-width: 200px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .vp-table {
     margin: 20px auto;
     border-collapse: collapse;
     width: 100%;
     max-width: 600px;
 }
-.vp-table td, .vp-table th {
+
+.vp-table td,
+.vp-table th {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
     font-size: 14px;
 }
+
 .vp-table2 th {
     background-color: #f0f0f0;
     font-weight: normal;
 }
+
 .edit-profile-button {
     display: block;
     margin: 20px auto;
@@ -635,27 +659,36 @@ cursor: pointer;
     cursor: pointer;
 }
 
-.design {  
-    color: pink;  
-    font-size: 20px;  
-    margin-top: 30px;  
-}  
-
-.navbar{
-    height: 99vh;
-    width: 16vw;
+.design {
+    color: pink;
+    font-size: 20px;
+    margin-top: 30px;
 }
 
-ul.nav li {
-    border-bottom: 1px solid darkgray;
-    width: 14vw;
-    transition: background-color 0.2s ease-in-out;
+/* new css */
+.header-container {
+    margin: 0;
+    padding: 0;
 }
 
-ul.nav li:hover {
-    background-color: #f0f0f0;
+.card {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
 }
 
-ul.nav li a{
-    color: black;
+
+.card-text small {
+    color: white !important;
+}
+
+.btn-add-to-cart {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+}
+
+.btn-add-to-cart:hover {
+    background-color: black;
+    color: white;
 }
