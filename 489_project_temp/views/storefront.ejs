@@ -24,7 +24,7 @@
     <!-- Background image -->
     <div class="bg-image" style="
   background-image: url('images/lights.webp');
-  height: 100%;
+  min-height: 100vh;
 ">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
             <!-- headers -->
@@ -33,7 +33,7 @@
             </div>
             <br>
             <div class="d-flex justify-content-center align-items-center h-100">
-                <h1 class="custom-header-sm custom-header-black">reel in your <em>dream</em> collectibles</h1>
+                <h1 class="custom-header-sm custom-header-black">Reel in your <em>dream</em> collectibles</h1>
             </div>
             <!-- headers end-->
 
@@ -75,16 +75,22 @@
                                                     <p class="card-text"><small class="text-muted">Posted by: <%=
                                                                 item.owner %></small></p>
                                                     <!-- modified form -->
-                                                    <form action=<%="/storefront/addtocart/" +item.id %> method="get">
-                                                        <input type="submit" class="btn btn-add-to-cart" value="Add to Cart">
-                                                    </form>
-                                                    <% if(item.owner==user.username){ %>
-                                                        <form action=<%="/storefront/removeProduct/" +item.id %>
-                                                            method="get">
-                                                            <input type="submit" class="btn btn-outline-danger"
-                                                                value="DELETE">
-                                                        </form>
-                                                        <% } %>
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <form action=<%="/storefront/addtocart/" +item.id %> method="get">
+                                                                <input type="submit" class="btn btn-add-to-cart" value="Add to Cart">
+                                                            </form>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <% if(item.owner==user.username){ %>
+                                                                <form action=<%="/storefront/removeProduct/" +item.id %>
+                                                                    method="get">
+                                                                    <input type="submit" class="btn btn-outline-danger"
+                                                                        value="DELETE">
+                                                                </form>
+                                                            <% } %>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
