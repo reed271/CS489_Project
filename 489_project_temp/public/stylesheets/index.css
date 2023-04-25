@@ -677,6 +677,19 @@ a:hover {
     border: 2px solid white;
 }
 
+.container-tp {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 2px 2px 2px 2px;
+}
+
+.form-input {
+    padding: 10px;
+    margin: 10px;
+    background-color: transparent;
+}
+
 
 .card-text small {
     color: white !important;
@@ -691,4 +704,20 @@ a:hover {
 .btn-add-to-cart:hover {
     background-color: black;
     color: white;
+}
+
+
+.trans-country {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+select#country {
+    background-color: transparent;
+}
+
+select#country option {
+    background-color: #fff;
+    color: black;
 }
