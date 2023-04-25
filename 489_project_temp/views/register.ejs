@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/stylesheets/ben_css.css">
@@ -15,21 +15,12 @@
 </head>
 
 <body>
-    <!-- headers -->
-    <div class="header-white">
-        <h1 class="custom-header custom-header-white">- REEL RELICS -</h1>
-    </div>
-    <div class="header-black">
-        <h1 class="custom-header-sm custom-header-black">reel  in  your  <em>dream</em>  collectibles</h1>
-    </div>
-    <!-- headers end-->
     <!-- Background image -->
     <div class="bg-image" style="
   background-image: url('images/studio.jpg');
   height: 100%;
 ">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-            <!-- headers -->
             <div class="d-flex justify-content-center align-items-center h-100">
                 <h1 class="custom-header custom-header-black">- REEL RELICS -</h1>
             </div>
@@ -37,73 +28,36 @@
             <div class="d-flex justify-content-center align-items-center h-100">
                 <h1 class="custom-header-sm custom-header-black">* LIGHTS, CAMERA, AUCTION ! *</h1>
             </div>
-            <!-- headers end-->
+            <br>
+            <div class="centered-form">
+                <form action="/register/create" method="post">
+                    <label for="username" class="white-text">Username:</label>
+                    <input type="text" id="username" name="username" required placeholder="username..." required
+                        class="transparent-input">
 
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- Left Navigation Column -->
-                    <div class="col-2" style="position:relative">
-                        <%- include("navbar") %>
-                    </div>
-                    <!-- Left Navigation Column -->
-                    <div class="col-10">
-                        <h1>
-                            Welcome to the Storefront!
-                            <hr>
-                        </h1>
-                        <br>
-                        <h2>
-                            Viewing Recently Posted Items
-                        </h2>
-                        <div class="postlist">
-                            <% for (item of products) { %>
-                                <% if(item.sold==false){ %>
+                    <label for="password" class="white-text">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="password..." required
+                        class="transparent-input">
 
-                                    <div class="card my-3">
-                                        <div class="row g-0">
-                                            <div class="col-md-4">
-                                                <img src="images/whip.jpg" class="img-fluid rounded-start"
-                                                    alt="product-image">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">
-                                                        <%= item.name %>
-                                                    </h5>
-                                                    <p class="card-text">
-                                                        <%= item.desc %>
-                                                    </p>
-                                                    <p class="card-text"><small class="text-muted">Posted at: February
-                                                            21st, 2023</small></p>
-                                                    <p class="card-text">Price: $<%= item.price %>
-                                                    </p>
-                                                    <p class="card-text"><small class="text-muted">Posted by: <%=
-                                                                item.owner %></small></p>
-                                                    <form action=<%="/storefront/addtocart/" +item.id %> method="get">
-                                                        <input type="submit" class="btn btn-outline-primary"
-                                                            value="Add to Cart">
-                                                    </form>
-                                                    <% if(item.owner==user.username){ %>
-                                                        <form action=<%="/storefront/removeProduct/" +item.id %>
-                                                            method="get">
-                                                            <input type="submit" class="btn btn-outline-danger"
-                                                                value="DELETE">
-                                                        </form>
-                                                        <% } %>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <label for="email" class="white-text">Email:</label>
+                    <input type="text" id="email" name="email" required placeholder="fella@mail.com..." required
+                        class="transparent-input">
 
-                                    <% } %>
-                                        <% } %>
+                    <label for="birthdate" class="white-text">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate" required placeholder="06/17/99..." required
+                        class="transparent-input">
 
-                        </div>
-                        <%- include("message", {type: "success" }) %>
+                    <label for="address" class="white-text">Address:</label>
+                    <input type="text" id="address" name="address" required placeholder="12345 25th St..." required
+                        class="transparent-input">
 
-
-                    </div>
-                </div>
+                    <input class="login-button" type="submit" value="Register">
+                </form>
+                <%- include("message", {type: "danger" }) %>
+                    <br>
+                    <a href="/register" class="white-text">
+                        New User? Click here!
+                    </a>
             </div>
 
         </div>
