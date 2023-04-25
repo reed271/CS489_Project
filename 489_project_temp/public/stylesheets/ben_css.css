@@ -178,6 +178,13 @@ span.price {
   font-size: 72px;
 }
 
+.custom-header-sm {
+  font-family: Impact, fantasy;
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+}
+
 .header-white {
   background-color: white;
   width: 100%;
@@ -247,9 +254,28 @@ span.price {
   border: 1px solid white;
   border-radius: 3px;
   background-color: transparent;
+  color: white
 }
 
 .login-button {
   background-color: #fff;
   color: #000;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-image {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  color: white;
+  font-weight: bold;
 }
