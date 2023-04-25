@@ -1,49 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storefront</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/ben_css.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+		crossorigin="anonymous"></script>
 </head>
 
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
+	<!-- Background image -->
+	<div class="bg-image" style="
+		background-image: url('../images/lights.webp');
+		min-height: 100vh;
+	  ">
+		<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+			<!-- headers -->
+			<div class="d-flex justify-content-center align-items-center h-100">
+				<h1 class="custom-header custom-header-black">- REEL RELICS -</h1>
+			</div>
+			<br>
+			<div class="d-flex justify-content-center align-items-center h-100">
+				<h1 class="custom-header-sm custom-header-black">reel in your <em>dream</em> collectibles</h1>
+			</div>
+			<!-- headers end-->
 
-            <!-- Left Navigation Column --> 
-            <div class="col-2" style="position:relative">
-                <%- include("navbar") %>
-            </div>
-            <!-- Left Navigation Column --> 
+			<div class="container-fluid">
+				<div class="row">
+					<!-- Left Navigation Column -->
+					<div class="col-2" style="position:relative">
+						<%- include("navbar") %>
+					</div>
+					<!-- Left Navigation Column -->
+					<div class="col-10">
+						<!-- Content -->
+						<main>
+							<h3>
+								Edit Profile
+							</h3>
+							<div class="container-tp">
+								<form method="post" action="editprofile/postchange">
+									<div class="form-input">
+										<label for="username" class="white-text">Address:</label>
+										<input type="text" id="address" name="address" value="12345 25th St..." required
+											class="transparent-input">
+									</div>
+
+									<div class="form-input">
+										<label for="email" class="white-text">Email:</label>
+										<input type="email" id="email" name="email" value="johndoe@example.com" required
+											class="transparent-input">
+									</div>
+
+									<div class="form-input">
+										<label for="profile-pic" class="ep-label">Profile Picture:</label>
+										<input type="file" id="profile-pic" name="profile-pic" class="ep-pic">
+									</div>
+
+									<div class="form-input">
+										<input type="submit" value="Save Changes" class="btn btn-add-to-cart">
+									</div>
+
+
+
+								</form>
+								<%- include("message", {type: "danger" }) %>
+
+							</div>
+						</main>
+
+						<!-- End Content -->
+					</div>
+				</div>
+			</div>
+
+			<!-- Background image -->
+		</div>
 </body>
 
-<div class="col-10">
-<head>
-	<title>Edit Profile</title>
-</head>
-<body>
-	<div class="container" class="ep-container">
-		<h1>Edit Profile</h1>
-		<hr>
-		<form class="ep-form" method="post" action="editprofile/postchange">
-			<label for="username" class="ep-label">Address:</label>
-			<input type="text" id="address" name="address" value="12345 25th St..." class="ep-email">
-			
-			<label for="email" class="ep-label">Email:</label>
-			<input type="email" id="email" name="email" value="johndoe@example.com" class="ep-email">
-			
-			<label for="profile-pic" class="ep-label">Profile Picture:</label>
-			<input type="file" id="profile-pic" name="profile-pic" class="ep-pic">
-			
-			<input type="submit" value="Save Changes" class="ep-submit">
-		</form>
-		<%- include("message", {type: "danger"}) %>
-	</div>
-</body>
-</div>
 </html>
