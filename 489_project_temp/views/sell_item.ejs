@@ -4,54 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Sell Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ben_css.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-
-            <!-- Left Navigation Column --> 
-            <div class="col-2" style="position:relative">
-                <%- include("navbar") %>
+    <!-- Background image -->
+    <div class="bg-image" style="
+   background-image: url('../images/lights.webp');
+   height: 100vh;
+ ">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <!-- headers -->
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <h1 class="custom-header custom-header-black">- REEL RELICS -</h1>
             </div>
-            <!-- Left Navigation Column --> 
-
-            <div class="col-10">
-                <head>
-                    <title>Upload Item for Sale</title>
-                </head>
-                <body>
-                    <h1>Upload Item for Sale</h1>
-                    <hr>
-                    <br>
-                    <form method="post" action="/storefront/sell_item/create">
-                        <label for="title">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <br>
-                        <hr>
-                        <label for="price">Price:</label>
-                        <input type="number" id="price" name="price" min="0" step="0.01" required>
-                        <br>
-                        <hr>
-                        <label for="image">Image:</label>
-                        <input type="file" id="image" name="image" accept="image/jpeg">
-                        <br>
-                        <hr>
-                        <label for="description">Description:</label>
-                        <textarea id="desc" name="desc" class="formbody" required></textarea>
-                        <br>
-                        <hr>
-                        <label for="description">Unique ID:</label>
-                        <textarea id="id" name="id" class="formbody" required></textarea>
-                        <br>
-                        <hr>
-                        <input type="submit" value="Upload">
-                    </form>
-                </body>
-
-
+            <br>
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <h1 class="custom-header-sm custom-header-black">reel in your <em>dream</em> collectibles</h1>
             </div>
+            <!-- headers end-->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Left Navigation Column -->
+                    <div class="col-2" style="position:relative">
+                        <%- include("navbar") %>
+                    </div>
+                    <!-- Left Navigation Column -->
+                    <div class="col-10">
+                        <!-- Content -->
+                        <main>
+                            <h3>
+                                Upload Item for Sale
+                            </h3>
+                            <div class="container-tp">
+                                <form method="post" action="/storefront/sell_item/create">
+                                    <div class="form-input">
+                                        <label for="title" class="white-text">Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Item"
+                                            required class="transparent-input">
+                                    </div>
+
+                                    <div class="form-input">
+                                        <label for="price" class="white-text">Price</label>
+                                        <input type="number" id="price" name="price" min="0" step="0.01" placeholder="$0.00"
+                                            required class="transparent-input">
+                                    </div>
+
+                                    <div class="form-input">
+                                        <label for="image" class="white-text">Image</label>
+                                        <input type="file" id="image" name="image" accept="image/jpeg">
+                                    </div>
+
+                                    <div class="form-input">
+                                        <label for="description">Description:</label>
+                                        <textarea id="desc" name="desc" class="formbody" placeholder="Describe item here..."
+                                        required class="transparent-input"></textarea>
+                                    </div>
+
+                                    <div class="form-input">
+                                        <label for="description">Unique ID:</label>
+                                        <textarea id="id" name="id" class="formbody" placeholder="Unique ID here..."
+                                        required class="transparent-input"></textarea>
+                                    </div>
+
+                                    <div class="form-input">
+                                        <input type="submit" value="Upload" class="btn btn-add-to-cart">
+                                    </div>
+
+                                </form>
+                            </div>
+                        </main>
+
+                        <!-- End Content -->
+                    </div>
+                </div>
+            </div>
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+                crossorigin="anonymous"></script>
         </div>
+        <!-- Background image -->
+    </div>
+
+</body>
+
+</html>
